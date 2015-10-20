@@ -1,0 +1,6 @@
+hardstatus on
+hardstatus alwayslastline
+hardstatus string "%w"
+ 
+bindkey -d ^? stuff ^H
+bindkey -d ^@ stuff ^H
