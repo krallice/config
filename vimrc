@@ -21,6 +21,7 @@ set guioptions-=m
 " Intelligent Menu
 set wildmenu
  
+" GVIM Copy/Paste Friendly Macros:
 vmap <C-c> "+y
 vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
@@ -36,6 +37,9 @@ set backspace=indent,eol,start
  
 " Search as characters are entered:
 set incsearch
+
+" Don't redrew when executing macros:
+set lazyredraw
  
 " Treat files with no extension as conf files (for the purpose of colouring)
 autocmd BufEnter * if &filetype == "" | setlocal ft=conf | endif
