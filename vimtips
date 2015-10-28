@@ -1,0 +1,77 @@
+VIM Tips::
+
+Indent while within insert mode:
+	<ctrl d> + <ctrl + t>
+
+Delete Empty Lines/Comments:
+	:g/^ /d
+	:g/^#/d
+
+Insert Register Contents while editing:
+	While within insert mode <ctr+r>REGISTER
+
+Jump to the last point of insert:
+	gi
+
+Start on specific line number:
+	vim +LINENUMBER file
+
+Jump around single pane:
+	H -> High
+	M -> Middle
+	L -> Low
+
+Jump Forward and Back in multiples of page:
+	Ctrl + f
+	Ctrl + b
+
+Escape Substitutes:
+	Ctrl + c OR;
+	Ctrl + [
+
+Editing a Macro (for ex. modifing the 'e' macro):
+	"ep
+	edit stuff
+	0"eyy
+
+Jump list:
+	ctrl + o <older>
+	ctrl + i <newer>
+	`. --> Jump to place of last edit
+
+SED style functionality:
+
+	:%s/\<idiot\>/manager/gc
+
+	This command will make the change and pause after each change to give you a chance to confirm it. You can enter "y" to accept the change or "n" to not accept it.
+
+	The parts of this command are:
+
+		: 	Enter command mode
+		% 	Perform this command on all lines (% is a synomim for the first to last line.)
+		s 	The short form of the :substitute command.
+		/\<idiot\>/ 	This text specifies the text we are looking for wand want. The \< tells Vim to match a word start and the \> tells Vim to match the end of a word.
+		/manager/ 	The replacement text
+		gc 	The flags. These are
+			g Global -- Change every occurance, not use the first one on each line
+			c Confirm -- Ask before making each change 
+
+Moving stuff around:
+
+	1. 	  	Move the cursor to the top of the paragraph you want to move.
+	2. 	ma 	Place a mark named "a" at this location. (Vim will give you no indication that this command has been executed. In other words, the screen will not change.)
+	3. 	  	Move the cursor to the bottom of the paragraph to be moved.
+	4. 	d'a 	Delete to mark "a". This puts the deleted text in a cut buffer.
+	5. 	  	Move the cursor to line where the text is to go. The paragraph will be placed after this one.
+	6. 	p 	Paste the text in below the cursor.
+
+Autorun commands:
+	:w ! sh		--> runs a loop over all lines exec'ing in sh
+
+Folding:
+	zf} 		--> fold paragraph
+	zfX 		--> fold towards direction X
+	zo		--> open fold
+	zc		--> close fold
+	va}zf		--> fold inside codeblock 
+	OR zfa}
