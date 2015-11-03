@@ -81,3 +81,4 @@ Runing External Commands:
 	:!! <to repeat last external command>
 	:r ! ls -l ./ <inserts the ls output into current buffer (via :r / read )>
 	:! wc -l % <% is a substitute for the current file name>
+	:%! cat -n <filter lines through external binary>
