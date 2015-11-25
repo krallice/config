@@ -1,0 +1,36 @@
+" Simplevimrc
+
+" DISPLAY ::
+
+" Pretty Colours:
+colorscheme elflord
+
+" Easier to close up buffers:
+set hidden
+
+" Funky Search:
+set incsearch
+
+" Cool Menu:
+set wildmenu
+
+" MAPPINGS ::
+
+" Edit and Source .vimrc:
+let mapleader = ','
+nnoremap <leader>ev :split $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
+" Escape Substitute <testing>:
+inoremap jk <esc>
+inoremap <esc> <nop>
+
+" Move lines up and down:
+noremap - ddp
+noremap _ ddP
+
+" Visually Select a word:
+noremap <space> viw
+
+" Uppercase the currently edited word:
+inoremap <c-u> <esc>viwU
