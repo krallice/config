@@ -44,6 +44,13 @@ set lazyredraw
 " Treat files with no extension as conf files (for the purpose of colouring)
 autocmd BufEnter * if &filetype == "" | setlocal ft=conf | endif
 
+" Set our map leader:
+let mapleader = ","
+
+" Edit and Source our .vimrc file:
+nnoremap <leader>ev :split $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
 " For todo files, syntax highlight lines that start with 'x'
 " syn region dash start=/^x/ end=/$/ oneline
 " highlight link dash String
