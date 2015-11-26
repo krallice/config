@@ -34,3 +34,11 @@ noremap <space> viw
 
 " Uppercase the currently edited word:
 inoremap <c-u> <esc>viwU
+
+" Change Tabs with Shift + Diretion:
+nnoremap <S-l> gt
+nnoremap <S-h> gT
+
+" Save files easier:
+nnoremap <leader>s :w<cr>
+inoremap <leader>s <C-c>:w<cr>
