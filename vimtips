@@ -38,6 +38,9 @@ Jump list:
 	ctrl + o <older>
 	ctrl + i <newer>
 	`. --> Jump to place of last edit
+	
+Make current line the top line:
+	zt
 
 SED style functionality:
 
