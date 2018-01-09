@@ -55,10 +55,11 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 " syn region dash start=/^x/ end=/$/ oneline
 " highlight link dash String
 
-AutoCmd BufNewFile,BufRead *.py
-    \ setlocal tabstop=4
-    \ setlocal softtabstop=4
-    \ setlocal shiftwidth=4
-    \ setlocal textwidth=80
-    \ setlocal smarttab
-    \ setlocal expandtab
+" Python PEP8 Formatting:
+au BufNewFile,BufRead *.py
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set textwidth=79 |
+    \ set expandtab |
+    \ set fileformat=unix |
