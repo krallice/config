@@ -1,0 +1,22 @@
+" Vundle goodness:
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
+
+" Surround: For brackets/tags:
+Plugin 'tpope/vim-surround'
+
+" Normal Stuff
+
+colorscheme elflord
+
+au BufNewFile,BufRead *.py
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set textwidth=79 |
+    \ set expandtab |
+    \ set fileformat=unix |
+
+filetype plugin indent on
