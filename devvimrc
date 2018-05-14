@@ -1,0 +1,51 @@
+" Vundle goodness:
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'Valloric/YouCompleteMe'
+
+" Surround: For brackets/tags:
+" ys, cd, ds
+Plugin 'tpope/vim-surround'
+
+" Repeat: For repeating commands in other plugins
+Plugin 'tpope/vim-repeat'
+
+Plugin 'ctrlpvim/ctrlp.vim'
+
+call vundle#end()
+filetype plugin indent on
+
+" Normal Stuff
+colorscheme elflord
+
+" Set Hidden and Paste Options
+set hidden
+set paste
+
+set incsearch
+
+" Mini VimRCs in project directories:
+set exrc
+set secure
+
+" YCM:
+let g:ycm_confirm_extra_conf=0
+let g:ycm_key_list_select_completion=[]
+let g:ycm_key_list_previous_completion=[]
+
+let @q = '0EElDa:0'
+
+au BufNewFile,BufRead *.py
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set textwidth=79 |
+    \ set expandtab |
+    \ set fileformat=unix |
