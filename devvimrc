@@ -1,4 +1,4 @@
-" Vundle goodness:
+" Vundle goodness
 set nocompatible
 filetype off
 
@@ -10,11 +10,11 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'Valloric/YouCompleteMe'
 
-" Surround: For brackets/tags:
+" Surround For brackets/tags:
 " ys, cd, ds
 Plugin 'tpope/vim-surround'
 
-" Repeat: For repeating commands in other plugins
+" Repeat For repeating commands in other plugins
 Plugin 'tpope/vim-repeat'
 
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -29,18 +29,20 @@ colorscheme elflord
 set hidden
 set paste
 
+set wildmenu
 set incsearch
 
-" Mini VimRCs in project directories:
+" Mini VimRCs in project directories
 set exrc
 set secure
 
-" YCM:
+" Macros
+let @q = '0EElDa:0'
+
+" YCM
 let g:ycm_confirm_extra_conf=0
 let g:ycm_key_list_select_completion=[]
 let g:ycm_key_list_previous_completion=[]
-
-let @q = '0EElDa:0'
 
 au BufNewFile,BufRead *.py
     \ set tabstop=4 |
@@ -49,3 +51,9 @@ au BufNewFile,BufRead *.py
     \ set textwidth=79 |
     \ set expandtab |
     \ set fileformat=unix |
+
+" Mappings
+
+" Save and Save all
+nnoremap <Leader>s <Esc>:w!<cr>
+nnoremap <Leader>sa <Esc>:wa!<cr>
