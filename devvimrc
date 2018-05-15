@@ -25,6 +25,9 @@ filetype plugin indent on
 " Normal Stuff
 colorscheme elflord
 
+" Disable Swaps
+set noswapfile
+
 " Set Hidden and Paste Options
 set hidden
 set paste
