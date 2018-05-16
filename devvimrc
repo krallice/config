@@ -32,8 +32,10 @@ set noswapfile
 set hidden
 set paste
 
+" Searching
 set wildmenu
 set incsearch
+set ignorecase
 
 " Mini VimRCs in project directories
 set exrc
@@ -46,6 +48,10 @@ let @q = '0EElDa:0'
 let g:ycm_confirm_extra_conf=0
 let g:ycm_key_list_select_completion=[]
 let g:ycm_key_list_previous_completion=[]
+
+" Control P
+nnoremap <leader>b :CtrlPBuffer<CR>
+nnoremap <leader>r ::CtrlPMRUFiles<CR>
 
 au BufNewFile,BufRead *.py
     \ set tabstop=4 |
