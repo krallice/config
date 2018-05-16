@@ -1,11 +1,11 @@
-" Vundle goodness
+" =======================
+" Vundle Plugins
 set nocompatible
 filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'Valloric/YouCompleteMe'
@@ -22,6 +22,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 call vundle#end()
 filetype plugin indent on
 
+" =======================
 " Normal Stuff
 colorscheme elflord
 
@@ -41,8 +42,28 @@ set ignorecase
 set exrc
 set secure
 
+" =======================
 " Macros
 let @q = '0EElDa:0'
+
+" =======================
+" Vanilla Mappings
+
+let mapleader = ','
+
+" Easy VIMRC Modification
+nnoremap <leader>ev :split $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
+" Save and Save all
+nnoremap <Leader>s <Esc>:w!<cr>
+nnoremap <Leader>sa <Esc>:wa!<cr>
+
+" GVIM Copy/Paste:
+vmap <C-c> "+y
+vmap <C-x> "+c
+vmap <C-v> c<ESC> "+p
+imap <C-v> <C-r><C-o>+
 
 " YCM
 let g:ycm_confirm_extra_conf=0
@@ -53,6 +74,8 @@ let g:ycm_key_list_previous_completion=[]
 nnoremap <leader>b :CtrlPBuffer<CR>
 nnoremap <leader>r ::CtrlPMRUFiles<CR>
 
+" =======================
+ " File Formatting
 au BufNewFile,BufRead *.py
     \ set tabstop=4 |
     \ set softtabstop=4 |
@@ -60,9 +83,3 @@ au BufNewFile,BufRead *.py
     \ set textwidth=79 |
     \ set expandtab |
     \ set fileformat=unix |
-
-" Mappings
-
-" Save and Save all
-nnoremap <Leader>s <Esc>:w!<cr>
-nnoremap <Leader>sa <Esc>:wa!<cr>
