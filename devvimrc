@@ -29,6 +29,9 @@ colorscheme elflord
 " Disable Swaps
 set noswapfile
 
+" Numbering
+set relativenumber
+
 " Set Hidden 
 set hidden
 
@@ -65,8 +68,7 @@ nnoremap <Leader>n :noh<cr>
 inoremap jk <Esc>
 
 " Pasting Toggle
-nnoremap <Leader>sp :set paste<cr>
-nnoremap <Leader>np :set nopaste<cr>
+set pastetoggle=<F2>
 
 " GVIM Copy/Paste:
 vmap <C-c> "+y
