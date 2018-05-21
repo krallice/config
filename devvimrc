@@ -29,9 +29,8 @@ colorscheme elflord
 " Disable Swaps
 set noswapfile
 
-" Set Hidden and Paste Options
+" Set Hidden 
 set hidden
-set paste
 
 " Searching
 set wildmenu
@@ -58,6 +57,16 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 " Save and Save all
 nnoremap <Leader>s <Esc>:w!<cr>
 nnoremap <Leader>sa <Esc>:wa!<cr>
+
+" Searching
+nnoremap <Leader>n :noh<cr>
+
+" Escape Replacement
+inoremap jk <Esc>
+
+" Pasting Toggle
+nnoremap <Leader>sp :set paste<cr>
+nnoremap <Leader>np :set nopaste<cr>
 
 " GVIM Copy/Paste:
 vmap <C-c> "+y
