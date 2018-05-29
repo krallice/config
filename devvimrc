@@ -77,9 +77,10 @@ vmap <C-v> c<ESC> "+p
 imap <C-v> <C-r><C-o>+
 
 " YCM
+set completeopt-=preview
 let g:ycm_confirm_extra_conf=0
-let g:ycm_key_list_select_completion=[]
-let g:ycm_key_list_previous_completion=[]
+" let g:ycm_key_list_select_completion=[]
+" let g:ycm_key_list_previous_completion=[]
 
 " Control P
 nnoremap <leader>b :CtrlPBuffer<CR>
