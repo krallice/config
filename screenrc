@@ -1,6 +1,10 @@
 hardstatus on
 hardstatus alwayslastline
 hardstatus string "%w"
+
+vbell on
+vbell_msg ''
+termcapinfo * vb=:
  
 bindkey -d ^? stuff ^H
 bindkey -d ^@ stuff ^H
