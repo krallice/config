@@ -1,10 +1,17 @@
 # config
-### Random config files and notes
 
-#### VIM Configuration
+### VIM Configuration:
 
-+ devvimrc - CLI Development as Mini IDE. YCM + ControlP.
-+ simplevimrc - File Editing.
-+ vimrc - Gvim + File Editing
-+ vimrc_plus_py - Gvim + File Editing + Python Formatting *(Deprecated)*
-+ ultralight_vimrc - File Editing + Surround *(Deprecated)*
++ **ide_vimrc** - CLI IDE for Linux Development. Requires:
+	+ YouCompleteMe
+	+ ControlP
++ **windows_vimrc** - GVIM/Windows File Editing
++ **simple_vimrc** - Simple Linux File Editing.
+
+### Random configuration files:
+
++ screenrc - Linux/Windows Screen Config
++ setmouse.sh - GNOME/X Mouse Configuration
++ vimtips - Collection of VIM user tips
++ pyrc - Python extensions to VIM
+
