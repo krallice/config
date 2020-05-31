@@ -11,7 +11,10 @@
 ### Random configuration files:
 
 + screenrc - Linux/Windows Screen Config
-+ setmouse.sh - GNOME/X Mouse Configuration
 + vimtips - Collection of VIM user tips
 + pyrc - Python extensions to VIM
 
+### X Configuration
++ X/xinitrc - Very basic xinitrc for a base arch installation
++ X/setmouse.sh - GNOME/X Mouse Configuration
++ X/screenlayout - ~/.screenlayout settings, including monitor order
