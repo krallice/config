@@ -19,3 +19,7 @@
 + X/Xresources - xterm colouring
 + X/setmouse.sh - GNOME/X Mouse Configuration
 + X/screenlayout - ~/.screenlayout settings, including monitor order
+
+### ALSA Configuration
++ ./etc/asound.conf - global sound card setting
++ ./asoundrc - dotfiles for local user for alsa configuration
