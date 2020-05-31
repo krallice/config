@@ -16,5 +16,6 @@
 
 ### X Configuration
 + X/xinitrc - Very basic xinitrc for a base arch installation
++ X/Xresources - xterm colouring
 + X/setmouse.sh - GNOME/X Mouse Configuration
 + X/screenlayout - ~/.screenlayout settings, including monitor order
