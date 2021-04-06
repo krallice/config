@@ -1,56 +1,109 @@
+" source $VIMRUNTIME/vimrc_example.vim
+" source $VIMRUNTIME/mswin.vim
+" behave mswin
+
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'scrooloose/nerdtree'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+" NERDTree
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
 " srozanc vim config file:
 " 2015-09
- 
+
 " Set Hidden Option
 set hidden
- 
+
 " Disable the swap file noise
 set noswapfile
- 
+
 " Set our font:
-set gfn=Courier_New:h9:cANSI
- 
+set gfn=Terminus:h9:cANSI
+" set gfn=Courier_New:h9:cANSI
+
 " Set syntax highlighting:
 syntax enable
- 
+
 " Remove Toolbar (guioptions == go)
 " T == toolbar && m == menu
 set guioptions-=T
 set guioptions-=m
- 
-" Intelligent Menu
-set wildmenu
- 
-" GVIM Copy/Paste Friendly Macros:
+
 vmap <C-c> "+y
 vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
 imap <C-v> <C-r><C-o>+
- 
+
 " Add functionality for block navigation:
 noremap <C-J> gj
 noremap <C-K> gk
- 
+
 " Fix up backspace behaviour:
 " Equiv to set backspace=2
 set backspace=indent,eol,start
- 
+
 " Search as characters are entered:
+set wildmenu
 set incsearch
+set ignorecase
 
-" Don't redrew when executing macros:
-set lazyredraw
- 
-" Treat files with no extension as conf files (for the purpose of colouring)
-autocmd BufEnter * if &filetype == "" | setlocal ft=conf | endif
+set relativenumber
 
-" Set our map leader:
-let mapleader = ","
-
-" Edit and Source our .vimrc file:
+let mapleader = ','
 nnoremap <leader>ev :split $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
-" For todo files, syntax highlight lines that start with 'x'
-" syn region dash start=/^x/ end=/$/ oneline
-" highlight link dash String
+nnoremap <leader>s <Esc>:w!<cr>
+nnoremap <leader>sa <Esc>:wa!<cr>
+
+inoremap jk <Esc>
+nnoremap <leader>bd :bd<cr>
+
+set pastetoggle=<F2>
+
+" Treat files with no extension as conf files (for the purpose of colouring)
+autocmd Bufread,BufNewFile *.todo set filetype=todo
+autocmd BufEnter * if &filetype == "" | setlocal ft=conf | endif
+
+" No auto comments
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+colorscheme slate
+
+set noeb 
+set vb 
+set t_vb=
+
+syntax match planProject /^\s*p.*$/
+highlight link planProject CursorLineNR
+" highlight link planProject VimWarn
+
+syntax match planTask /^\s*-.*$/
+highlight link planTask Special
+
+syntax match planUrgent /^\s*u.*$/
+highlight link planUrgent PMenu
+
+syntax match planToday /^\s*t.*$/
+highlight link planToday Identifier
+
+syntax match planNow /^\s*e.*$/
+highlight link planNow Directory
+
+syntax match planComplete /^\s*x.*$/
+" highlight link planComplete String
+highlight link planComplete Comment
+
+" syntax match planComment /^\s*c.*$/
+" highlight link planComment VimInsert
