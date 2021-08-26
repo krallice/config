@@ -23,7 +23,7 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " Escape Substitute <testing>:
 inoremap jk <esc>
-inoremap <esc> <nop>
+" inoremap <esc> <nop>
 
 " Move lines up and down:
 noremap - ddp
