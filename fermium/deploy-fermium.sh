@@ -2,8 +2,8 @@
 
 # Install Deps:
 echo "Installing Deps" | systemd-cat -t deploy-fermium
-apt update
-apt install python3.8-venv
+apt update -y
+apt install python3.8-venv net-tools -y
 
 # Install Python Environment:
 echo "Creating Python Environment" | systemd-cat -t deploy-fermium
