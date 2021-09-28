@@ -23,4 +23,4 @@ curl https://raw.githubusercontent.com/krallice/config/master/fermium/main.py -o
 
 # Run:
 echo "Running Fermium" | systemd-cat -t deploy-fermium
-export FLASK_APP="main"; flask run --host="0.0.0.0" --port="80"
+export FLASK_APP="main"; flask run --host="0.0.0.0" --port="80" &
