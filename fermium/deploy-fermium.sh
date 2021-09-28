@@ -13,8 +13,9 @@ python3 -m venv ./venv
 . ./venv/bin/activate
 
 # Install Flask
-echo "Installing Flask" | systemd-cat -t deploy-fermium
+echo "Installing Flask and PyYaml" | systemd-cat -t deploy-fermium
 pip install flask
+pip install pyyaml
 
 # Grab Code:
 echo "Grabbing Code" | systemd-cat -t deploy-fermium
