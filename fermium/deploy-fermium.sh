@@ -12,6 +12,10 @@ cd /fermium
 python3 -m venv ./venv
 . ./venv/bin/activate
 
+# Install Flask
+echo "Installing Flask" | systemd-cat -t deploy-fermium
+pip install flask
+
 # Grab Code:
 echo "Grabbing Code" | systemd-cat -t deploy-fermium
 curl https://raw.githubusercontent.com/krallice/config/master/fermium/main.py -o ./main.py
